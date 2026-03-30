@@ -28,7 +28,7 @@ export default function Hero() {
         </div>
 
         <div className="w-150 md:w-200 px-15">
-          <Card>
+          <Card className="border border-black dark:border-white shadow-[0_0_15px_rgba(0,0,0)]">
             <div className="space-y-5 px-20">
               <Flex gap="4">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
