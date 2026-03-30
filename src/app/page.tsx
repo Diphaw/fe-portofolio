@@ -1,13 +1,10 @@
 // import Image from "next/image";
 
-import Header from "@/components/header";
-import Hero from "@/components/hero";
+import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
     <div className="bg-zinc-50 dark:bg-black">
-      <main className="space-y-20">
-        <Header/>
         <Hero />
         {/* <Image
           className="dark:invert"
@@ -17,7 +14,6 @@ export default function Home() {
           height={20}
           priority
         /> */}
-      </main>
     </div>
   );
 }
