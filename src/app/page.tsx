@@ -4,7 +4,7 @@ import Hero from "@/components/sections/hero";
 
 export default function Home() {
   return (
-    <div className="bg-zinc-50 dark:bg-black">
+    <div className="bg-zinc-50 dark:bg-black ">
         <Hero />
         {/* <Image
           className="dark:invert"
