@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full bg-white dark:bg-gray-800 shadow">
+    <header className="w-full bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
       <Flex justify="between" align="center" className="p-4 px-20">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           DevPortfolio
@@ -38,7 +38,7 @@ export default function Header() {
                   href={item.href}
                   className={
                     isMain
-                      ? "bg-red-500 text-white font-semibold rounded px-4 py-2"
+                      ? "bg-green-500 text-white font-semibold rounded px-4 py-2"
                       : isActive
                         ? "text-black dark:text-white font-semibold"
                         : "text-gray-400 dark:text-white hover:text-black font-semibold"

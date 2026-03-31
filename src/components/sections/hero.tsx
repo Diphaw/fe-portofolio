@@ -57,7 +57,7 @@ export default function Hero() {
                   "const developer = {",
                   '  name: "Dipha Wiguna",',
                   '  passion: "Frontend Developer",',
-                  '  skills: ["HTML", "CSS", "TypeScript", "Next.js"]',
+                  '  skills: ["HTML", "TailwindCSS", "TypeScript", "Next.js"]',
                   "}",
                 ].map((line, i) => (
                   <motion.div
