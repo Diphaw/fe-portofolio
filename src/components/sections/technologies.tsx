@@ -15,25 +15,25 @@ export default function Technologies() {
         </h1>
       </div>
 
-      <Flex gap="5" className="px-20 py-10">
-        <Card className="w-40 ">
+      <Flex gap="5" wrap="wrap" className="px-20 py-10 w-full">
+        <Card className="w-fit ">
           <FaHtml5 size={40} className="text-orange-500" />
-          <p>HTML</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">HTML</p>
         </Card>
 
-        <Card className="w-40 flex ">
+        <Card className="w-fit">
           <SiTailwindcss size={40} className="text-cyan-400" />
-          <p>TailwindCSS</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">TailwindCSS</p>
         </Card>
 
-        <Card className="w-40 ">
+        <Card className="w-fit ">
           <SiTypescript size={40} className="text-blue-500" />
-          <p>TypeScript</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">TypeScript</p>
         </Card>
 
-        <Card className="w-40 ">
+        <Card className="w-fit ">
           <SiNextdotjs size={40} className="text-black dark:text-white" />
-          <p>Next.js</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">Next.js</p>
         </Card>
       </Flex>
     </section>
