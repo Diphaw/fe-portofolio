@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import TechStack from "@/components/sections/techstack";
+import TechStack from "@/components/sections/technologies";
 
 export default function MainContent() {
   return (
