@@ -5,7 +5,7 @@ import TechStack from "@/components/sections/technologies";
 
 export default function MainContent() {
   return (
-    <div className="bg-zinc-50 dark:bg-black space-y-20">
+    <div className="bg-white dark:bg-black space-y-20">
       <Header />
       <section id="technologies" className="scroll-mt-24">
         <TechStack />
