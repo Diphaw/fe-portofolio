@@ -1,4 +1,6 @@
-import { Card, Flex } from "@radix-ui/themes";
+import { Button, Card, Flex } from "@radix-ui/themes";
+import { MdEmail } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -13,32 +15,37 @@ export default function Contact() {
         </h1>
       </div>
 
-      <Flex gap="5" direction="column"className="px-20 py-10">
-        <Card className="w-1/2 ">
-          <h1>Frontend Developer</h1>
-          <h2 className="text-sm">Geekgarden</h2>
-          <p className="text-sm">
-            Developed and maintained responsive web applications using React and
-            TypeScript.
-          </p>
+      <Flex gap="5" className="w-full px-20 py-10">
+        <Card className="md:w-1/4 w-full ">
+          <div className="flex flex-col items-center text-center space-y-3">
+            <Card className="w-fit mx-auto">
+              <MdEmail size={40} className="text-black dark:text-white" />
+            </Card>
+            <h1 className="md:text-xl text-lg font-semibold">Email me</h1>
+            <h2 className="md:text-lg text-sm">diphawgna@gmail.com</h2>
+            <Button color="green">
+              <a href="mailto:diphawgna@gmail.com">Send Email</a>
+            </Button>
+          </div>
         </Card>
 
-        <Card className="w-1/2 ">
-          <h1>Frontend Developer</h1>
-          <h2 className="text-sm">Reddy.id</h2>
-          <p className="text-sm">
-            Developed and maintained responsive web applications using React and
-            TypeScript.
-          </p>
-        </Card>
-
-        <Card className="w-1/2 ">
-          <h1>Frontend Developer</h1>
-          <h2 className="text-sm">PT Rapier Technology International</h2>
-          <p className="text-sm">
-            Developed and maintained responsive web applications using React and
-            TypeScript.
-          </p>
+        <Card className="md:w-1/4 w-full">
+          <div className="flex flex-col items-center text-center space-y-3">
+            <Card className="w-fit mx-auto">
+              <FaWhatsapp size={40} className="text-green-500" />
+            </Card>
+            <h1 className="md:text-xl text-lg font-semibold">WhatsApp me</h1>
+            <h2 className="md:text-lg text-sm">085331320909</h2>
+            <Button color="green">
+              <a
+                href="https://wa.me/085331320909"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Send WhatsApp
+              </a>
+            </Button>
+          </div>
         </Card>
       </Flex>
     </section>
