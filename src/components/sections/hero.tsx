@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="w-full min-h-screen flex items-center bg-white dark:bg-black ">
       <Flex
         justify="between"
-        className="gap-20 max-w-7xl mx-auto flex-col md:flex-row w-full items-center"
+        className="gap-20 px-10 md:px-0 max-w-7xl mx-auto flex-col md:flex-row w-full items-center"
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -36,7 +36,7 @@ export default function Hero() {
           </Button>
         </motion.div>
 
-        <div className="max-w-md md:max-w-lg">
+        <div className="w-full max-w-md md:max-w-lg">
           <Card className="border border-black dark:border-white shadow-[0_0_15px_rgba(0,0,0)] transition hover:scale-105 hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]">
             <div className="space-y-5 px-5">
               <Flex gap="4">
