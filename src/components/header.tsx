@@ -74,7 +74,7 @@ export default function Header() {
                   href={item.href}
                   className={
                     isMain
-                      ? "bg-red-500 text-white font-semibold rounded px-4 py-2"
+                      ? "bg-green-500 text-white font-semibold rounded px-4 py-2"
                       : isActive
                         ? "text-black dark:text-white font-semibold"
                         : "text-gray-400 dark:text-white hover:text-black font-semibold"

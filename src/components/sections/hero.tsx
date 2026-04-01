@@ -26,9 +26,7 @@ export default function Hero() {
             Frontend Developer
           </h2>
           <p className="max-w-md md:text-lg text-sm">
-            A Fullstack Developer who started with frontend and is now exploring
-            backend development. I enjoy creating engaging user interfaces while
-            learning how systems work behind the scenes.
+            a Frontend Developer passionate about building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into interactive digital experiences and continuously improving my skills in both frontend and backend development.
           </p>
 
           <Button onClick={() => router.push("/main")} color="green" size="3">
@@ -38,7 +36,7 @@ export default function Hero() {
 
         <div className="w-full max-w-md md:max-w-lg">
           <Card className="border border-black dark:border-white shadow-[0_0_15px_rgba(0,0,0)] transition hover:scale-105 hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]">
-            <div className="space-y-5 px-5">
+            <div className="space-y-5 px-5 wrap">
               <Flex gap="4">
                 {["bg-red-500", "bg-yellow-500", "bg-green-500"].map(
                   (color, i) => (
@@ -65,7 +63,7 @@ export default function Hero() {
                 ].map((line, i) => (
                   <motion.div
                     key={i}
-                    className="overflow-hidden whitespace-pre"
+                    className="whitespace-pre-wrap wrap-break-word"
                     initial={{ clipPath: "inset(0 100% 0 0)" }}
                     animate={{ clipPath: "inset(0 0% 0 0)" }}
                     transition={{

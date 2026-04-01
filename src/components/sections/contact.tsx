@@ -15,7 +15,7 @@ export default function Contact() {
         </h1>
       </div>
 
-      <Flex gap="5" className="w-full px-20 py-10">
+      <Flex gap="5" wrap="wrap" className="w-full px-20 py-10">
         <Card className="md:w-1/4 w-full ">
           <div className="flex flex-col items-center text-center space-y-3">
             <Card className="w-fit mx-auto">
