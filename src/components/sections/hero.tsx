@@ -10,9 +10,8 @@ export default function Hero() {
   return (
     <section className="w-full min-h-screen flex items-center bg-white dark:bg-black ">
       <Flex
-        align="center"
-        justify="center"
-        className="px-20 gap-20 flex-col md:flex-row w-full"
+        justify="between"
+        className="gap-20 max-w-7xl mx-auto flex-col md:flex-row w-full items-center"
       >
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -20,9 +19,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-5"
         >
-          <h1 className="text-5xl font-bold">Hello, i&apos;m Dipha Wiguna</h1>
-          <h2 className="text-4xl font-semibold">Frontend Developer</h2>
-          <p className="max-w-xl">
+          <h1 className="text-3xl md:text-5xl font-bold">
+            Hello, i&apos;m Dipha Wiguna
+          </h1>
+          <h2 className="text-xl md:text-4xl font-semibold">
+            Frontend Developer
+          </h2>
+          <p className="max-w-md md:text-lg text-sm">
             A Fullstack Developer who started with frontend and is now exploring
             backend development. I enjoy creating engaging user interfaces while
             learning how systems work behind the scenes.
@@ -33,7 +36,7 @@ export default function Hero() {
           </Button>
         </motion.div>
 
-        <div className="md:px-15">
+        <div className="max-w-md md:max-w-lg">
           <Card className="border border-black dark:border-white shadow-[0_0_15px_rgba(0,0,0)] transition hover:scale-105 hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]">
             <div className="space-y-5 px-5">
               <Flex gap="4">
@@ -62,9 +65,9 @@ export default function Hero() {
                 ].map((line, i) => (
                   <motion.div
                     key={i}
-                    className="overflow-hidden whitespace-nowrap"
-                    initial={{ width: 0 }}
-                    animate={{ width: "100%" }}
+                    className="overflow-hidden whitespace-pre"
+                    initial={{ clipPath: "inset(0 100% 0 0)" }}
+                    animate={{ clipPath: "inset(0 0% 0 0)" }}
                     transition={{
                       duration: 1,
                       delay: i * 0.6,
@@ -72,18 +75,6 @@ export default function Hero() {
                     }}
                   >
                     <span>{line}</span>
-                    {i === 4 && (
-                      <motion.span
-                        className="inline-block ml-1"
-                        animate={{ opacity: [0, 1, 0] }}
-                        transition={{
-                          duration: 1,
-                          repeat: Infinity,
-                        }}
-                      >
-                        |
-                      </motion.span>
-                    )}
                   </motion.div>
                 ))}
               </Flex>
