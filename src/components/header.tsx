@@ -55,10 +55,10 @@ export default function Header() {
           <Button
             color="gray"
             variant="ghost"
-            className="text-black dark:text-white"
+            
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="text-black dark:text-white"/> : <Menu className="text-black dark:text-white"/>}
           </Button>
         </div>
       </Flex>
