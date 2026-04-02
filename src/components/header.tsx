@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
-      <Flex justify="between" align="center" className="p-4 px-20">
+      <Flex justify="between" align="center" className="p-4 px-10 md:px-20">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           DevPortfolio
         </h1>
@@ -55,6 +55,7 @@ export default function Header() {
           <Button
             color="gray"
             variant="ghost"
+            className="text-black dark:text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X /> : <Menu />}

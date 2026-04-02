@@ -6,7 +6,7 @@ import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 export default function Technologies() {
   return (
     <section id="technologies" className="w-full bg-white dark:bg-black">
-      <div className="px-20 space-y-5">
+      <div className="px-10 md:px-20 space-y-5">
         <Flex align="center" gap="4">
           <div className="w-12 h-px bg-green-500"></div>
           <h2 className="font-semibold text-green-500"> Experience </h2>
@@ -17,7 +17,7 @@ export default function Technologies() {
       </div>
 
       <div className="space-y-5 py-5">
-        <Flex direction="column" className="px-20">
+        <Flex direction="column" className="px-10 md:px-20">
           <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
@@ -69,7 +69,7 @@ export default function Technologies() {
           </Card>
         </Flex>
 
-        <Flex direction="column" className="px-20">
+        <Flex direction="column" className="px-10 md:px-20">
           <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
@@ -121,7 +121,7 @@ export default function Technologies() {
           </Card>
         </Flex>
 
-        <Flex direction="column" className="px-20">
+        <Flex direction="column" className="px-10 md:px-20">
           <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
