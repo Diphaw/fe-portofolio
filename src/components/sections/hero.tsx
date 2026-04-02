@@ -19,13 +19,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="space-y-5"
         >
-          <h1 className="text-3xl md:text-5xl font-bold">
+          <h1 className=" text-black dark:text-white text-3xl md:text-5xl font-bold">
             Hello, i&apos;m Dipha Wiguna
           </h1>
-          <h2 className="text-xl md:text-4xl font-semibold">
+          <h2 className="text-black dark:text-white text-xl md:text-4xl font-semibold">
             Frontend Developer
           </h2>
-          <p className="max-w-md md:text-lg text-sm">
+          <p className="text-black dark:text-white max-w-md md:text-lg text-sm">
             a Frontend Developer passionate about building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into interactive digital experiences and continuously improving my skills in both frontend and backend development.
           </p>
 

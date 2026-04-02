@@ -16,9 +16,9 @@ export default function Contact() {
       </div>
 
       <Flex gap="5" wrap="wrap" className="w-full px-20 py-10">
-        <Card className="md:w-1/4 w-full ">
+        <Card className="md:w-1/4 w-full bg-white dark:bg-black border border-gray-300">
           <div className="flex flex-col items-center text-center space-y-3">
-            <Card className="w-fit mx-auto">
+            <Card className="w-fit mx-auto bg-white dark:bg-black border border-gray-300">
               <MdEmail size={40} className="text-black dark:text-white" />
             </Card>
             <h1 className="md:text-xl text-lg font-semibold">Email me</h1>
@@ -29,9 +29,9 @@ export default function Contact() {
           </div>
         </Card>
 
-        <Card className="md:w-1/4 w-full">
+        <Card className="md:w-1/4 w-full bg-white dark:bg-black border border-gray-300">
           <div className="flex flex-col items-center text-center space-y-3">
-            <Card className="w-fit mx-auto">
+            <Card className="w-fit mx-auto bg-white dark:bg-black border border-gray-300">
               <FaWhatsapp size={40} className="text-green-500" />
             </Card>
             <h1 className="md:text-xl text-lg font-semibold">WhatsApp me</h1>

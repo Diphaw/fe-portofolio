@@ -18,7 +18,7 @@ export default function Technologies() {
 
       <div className="space-y-5 py-5">
         <Flex direction="column" className="px-20">
-          <Card className="md:w-1/2 w-full">
+          <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
                 <h1 className="md:text-2xl text-xl font-semibold text-black dark:text-white">
@@ -35,26 +35,26 @@ export default function Technologies() {
                   Nextjs and TypeScript.
                 </p>
 
-                <Flex gap="4" wrap="wrap" className="pt-4 w-full">
-                  <Card className="w-fit">
+                <Flex gap="4" wrap="wrap" className="pt-4 w-full ">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <FaHtml5 size={20} className="text-orange-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       HTML
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTailwindcss size={20} className="text-cyan-400" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TailwindCSS
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTypescript size={20} className="text-blue-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TypeScript
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiNextdotjs
                       size={20}
                       className="text-black dark:text-white"
@@ -70,7 +70,7 @@ export default function Technologies() {
         </Flex>
 
         <Flex direction="column" className="px-20">
-          <Card className="md:w-1/2 w-full">
+          <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
                 <h1 className="md:text-2xl text-xl font-semibold text-black dark:text-white">
@@ -88,25 +88,25 @@ export default function Technologies() {
                 </p>
 
                 <Flex gap="4" wrap="wrap" className="pt-4 w-full">
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <FaHtml5 size={20} className="text-orange-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       HTML
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTailwindcss size={20} className="text-cyan-400" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TailwindCSS
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTypescript size={20} className="text-blue-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TypeScript
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiNextdotjs
                       size={20}
                       className="text-black dark:text-white"
@@ -122,7 +122,7 @@ export default function Technologies() {
         </Flex>
 
         <Flex direction="column" className="px-20">
-          <Card className="md:w-1/2 w-full">
+          <Card className="md:w-1/2 w-full bg-white dark:bg-black border border-gray-300">
             <Flex className="py-5 px-5">
               <Box className="">
                 <h1 className="md:text-2xl text-xl font-semibold text-black dark:text-white">
@@ -140,25 +140,25 @@ export default function Technologies() {
                 </p>
 
                 <Flex gap="4" wrap="wrap" className="pt-4 w-full">
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <FaHtml5 size={20} className="text-orange-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       HTML
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTailwindcss size={20} className="text-cyan-400" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TailwindCSS
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiTypescript size={20} className="text-blue-500" />
                     <p className="text-black dark:text-white md:text-md text-sm wrap-break-word">
                       TypeScript
                     </p>
                   </Card>
-                  <Card className="w-fit">
+                  <Card className="w-fit bg-white dark:bg-black border border-gray-300">
                     <SiNextdotjs
                       size={20}
                       className="text-black dark:text-white"
