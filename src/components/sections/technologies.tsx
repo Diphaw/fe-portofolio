@@ -16,24 +16,30 @@ export default function Technologies() {
       </div>
 
       <Flex gap="5" wrap="wrap" className="px-20 py-10 w-full">
-        <Card className="w-fit ">
+        <Card className="w-fit bg-white dark:bg-black border border-gray-30">
           <FaHtml5 size={40} className="text-orange-500" />
           <p className="text-black dark:text-white text-sm md:text-lg">HTML</p>
         </Card>
 
-        <Card className="w-fit">
+        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
           <SiTailwindcss size={40} className="text-cyan-400" />
-          <p className="text-black dark:text-white text-sm md:text-lg">TailwindCSS</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">
+            TailwindCSS
+          </p>
         </Card>
 
-        <Card className="w-fit ">
+        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
           <SiTypescript size={40} className="text-blue-500" />
-          <p className="text-black dark:text-white text-sm md:text-lg">TypeScript</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">
+            TypeScript
+          </p>
         </Card>
 
-        <Card className="w-fit ">
+        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
           <SiNextdotjs size={40} className="text-black dark:text-white" />
-          <p className="text-black dark:text-white text-sm md:text-lg">Next.js</p>
+          <p className="text-black dark:text-white text-sm md:text-lg">
+            Next.js
+          </p>
         </Card>
       </Flex>
     </section>
