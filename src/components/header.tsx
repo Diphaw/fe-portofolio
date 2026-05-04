@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
       <Flex justify="between" align="center" className="p-4 px-10 md:px-20">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
+        <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
           DevPortfolio
         </h1>
 
