@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="w-full bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+    <header className="fixed top-0 z-50 w-full border-b border-gray-200 bg-white/70 shadow-sm backdrop-blur-md dark:border-gray-800 dark:bg-black/70">
       <Flex justify="between" align="center" className="p-4 px-10 md:px-20">
         <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white">
           DevPortfolio
@@ -65,7 +65,7 @@ export default function Header() {
 
       <div>
         {isMenuOpen && (
-          <Flex gap="6" direction="column" className=" md:hidden px-20 py-5">
+          <Flex gap="6" direction="column" className=" md:hidden px-10 py-5">
             {navItems.map((item) => {
               const isMain = item.href === "/";
               const isActive = activeHash === item.href;
