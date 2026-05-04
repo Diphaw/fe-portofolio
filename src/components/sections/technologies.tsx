@@ -1,46 +1,47 @@
+"use client";
+
+import { TECH_STACK } from "@/constants";
 import { Card, Flex } from "@radix-ui/themes";
-import { FaHtml5 } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { motion } from "framer-motion";
 
 export default function Technologies() {
   return (
-    <section id="technologies" className="w-full bg-white dark:bg-black ">
-      <div className="px-10 md:px-20 space-y-5">
+    <section id="technologies" className="w-full bg-transparent">
+      <div className="space-y-5 px-10 md:px-20">
         <Flex align="center" gap="4">
-          <div className="w-12 h-px bg-green-500"></div>
+          <div className="h-px w-12 bg-green-500"></div>
           <h2 className="font-semibold text-green-500"> Tech Stack </h2>
         </Flex>
-        <h1 className="text-black dark:text-white text-3xl font-semibold">
+        <h1 className="text-3xl font-semibold text-black dark:text-white">
           My Technologies and Tools
         </h1>
       </div>
 
-      <Flex gap="5" wrap="wrap" className="px-10 md:px-20 py-10 w-full">
-        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
-          <FaHtml5 size={40} className="text-orange-500" />
-          <p className="text-black dark:text-white text-sm md:text-lg">HTML</p>
-        </Card>
-
-        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
-          <SiTailwindcss size={40} className="text-cyan-400" />
-          <p className="text-black dark:text-white text-sm md:text-lg">
-            TailwindCSS
-          </p>
-        </Card>
-
-        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
-          <SiTypescript size={40} className="text-blue-500" />
-          <p className="text-black dark:text-white text-sm md:text-lg">
-            TypeScript
-          </p>
-        </Card>
-
-        <Card className="w-fit bg-white dark:bg-black border border-gray-300">
-          <SiNextdotjs size={40} className="text-black dark:text-white" />
-          <p className="text-black dark:text-white text-sm md:text-lg">
-            Next.js
-          </p>
-        </Card>
+      <Flex gap="5" wrap="wrap" className="w-full px-10 py-10 md:px-20">
+        {TECH_STACK.map((tech, index) => {
+          const Icon = tech.icon;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <Card className="group w-fit border border-gray-200 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.2)] dark:border-gray-800 dark:bg-black/50 dark:hover:border-green-500">
+                <Flex align="center" gap="3" className="px-2 py-1">
+                  <Icon
+                    size={40}
+                    className={`${tech.color} transition-transform duration-300 group-hover:scale-110`}
+                  />
+                  <p className="text-sm text-black dark:text-white md:text-lg">
+                    {tech.name}
+                  </p>
+                </Flex>
+              </Card>
+            </motion.div>
+          );
+        })}
       </Flex>
     </section>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { CODE_LINES, WINDOW_DOTS } from "@/constants";
 import { Button, Card, Flex } from "@radix-ui/themes";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -8,67 +9,76 @@ export default function Hero() {
   const router = useRouter();
 
   return (
-    <section className="w-full min-h-screen flex items-center bg-white dark:bg-black ">
+    <section className="flex min-h-screen w-full items-center bg-transparent">
       <Flex
         justify="between"
-        className="gap-20 px-10 md:px-0 max-w-7xl mx-auto flex-col md:flex-row w-full items-center"
+        className="mx-auto w-full max-w-7xl flex-col items-center gap-10 px-10 md:flex-row md:px-0"
       >
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          className="w-full space-y-4"
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-5"
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className=" text-black dark:text-white text-3xl md:text-5xl font-bold">
-            Hello, i&apos;m Dipha Wiguna
+          <h1 className="text-3xl font-bold text-black dark:text-white md:text-5xl">
+            Hello, I&apos;m Dipha Wiguna
           </h1>
-          <h2 className="text-black dark:text-white text-xl md:text-4xl font-semibold">
+          <h2 className="text-xl font-semibold text-black dark:text-white md:text-4xl">
             Frontend Developer
           </h2>
-          <p className="text-black dark:text-white max-w-md md:text-lg text-sm">
-            a Frontend Developer passionate about building modern, responsive, and user-friendly web applications. I enjoy transforming ideas into interactive digital experiences and continuously improving my skills in both frontend and backend development.
+          <p className="mt-5 max-w-md text-sm text-black dark:text-white md:text-lg">
+            A Frontend Developer passionate about building modern, responsive,
+            and user-friendly web applications. I enjoy transforming ideas into
+            interactive digital experiences and continuously improving my skills
+            in both frontend and backend development.
           </p>
 
-          <Button onClick={() => router.push("/main")} color="green" size="3">
-            Explore
-          </Button>
+          <div className="pt-2">
+            <Button
+              onClick={() => router.push("/main")}
+              color="green"
+              size="3"
+              className="cursor-pointer transition-transform hover:scale-105"
+            >
+              Explore
+            </Button>
+          </div>
         </motion.div>
 
-        <div className="w-full max-w-md md:max-w-lg">
-          <Card className="border border-black dark:border-white shadow-[0_0_15px_rgba(0,0,0)] transition hover:scale-105 hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]">
-            <div className="space-y-5 px-5 wrap">
+        <motion.div
+          className="w-full max-w-md md:max-w-lg"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Card className="border border-gray-200 bg-white/40 backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.1)] dark:border-gray-800 dark:bg-black/40">
+            <div className="wrap space-y-5 px-5 py-5">
               <Flex gap="4">
-                {["bg-red-500", "bg-yellow-500", "bg-green-500"].map(
-                  (color, i) => (
-                    <motion.div
-                      key={i}
-                      className={`w-3 h-3 rounded-full ${color}`}
-                      animate={{ scale: [1, 1.3, 1] }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        delay: i * 0.2,
-                      }}
-                    />
-                  ),
-                )}
-              </Flex>
-              <Flex direction="column" gap="4" className="font-mono text-sm">
-                {[
-                  "const developer = {",
-                  '  name: "Dipha Wiguna",',
-                  '  passion: "Frontend Developer",',
-                  '  skills: ["HTML", "CSS", "TypeScript", "Next.js"]',
-                  "}",
-                ].map((line, i) => (
+                {WINDOW_DOTS.map((color, i) => (
                   <motion.div
                     key={i}
-                    className="whitespace-pre-wrap wrap-break-word"
+                    className={`h-3 w-3 rounded-full ${color}`}
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: i * 0.1 + 0.5,
+                      ease: "backOut",
+                    }}
+                  />
+                ))}
+              </Flex>
+
+              <Flex direction="column" gap="4" className="font-mono text-sm text-black dark:text-gray-300">
+                {CODE_LINES.map((line, i) => (
+                  <motion.div
+                    key={i}
+                    className="wrap-break-word whitespace-pre-wrap"
                     initial={{ clipPath: "inset(0 100% 0 0)" }}
                     animate={{ clipPath: "inset(0 0% 0 0)" }}
                     transition={{
                       duration: 1,
-                      delay: i * 0.6,
+                      delay: i * 0.6 + 0.5,
                       ease: "easeInOut",
                     }}
                   >
@@ -78,7 +88,7 @@ export default function Hero() {
               </Flex>
             </div>
           </Card>
-        </div>
+        </motion.div>
       </Flex>
     </section>
   );
