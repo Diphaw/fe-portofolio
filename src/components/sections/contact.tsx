@@ -3,7 +3,6 @@
 import { Button, Card, Flex } from "@radix-ui/themes";
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
@@ -19,14 +18,8 @@ export default function Contact() {
       </div>
 
       <Flex gap="5" wrap="wrap" className="w-full px-10 py-10 md:px-20">
-        <motion.div
-          className="w-full md:w-1/4"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <Card className="group border border-gray-200 bg-white/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] dark:border-gray-800 dark:bg-black/40">
+        <div className="w-full md:w-1/4">
+          <Card className="group border border-gray-200 bg-white/80 transition-colors duration-300 hover:border-green-500 dark:border-gray-800 dark:bg-neutral-900/80">
             <div className="flex flex-col items-center space-y-3 text-center py-4">
               <Card className="mx-auto w-fit border border-gray-200 bg-white/60 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-black/60">
                 <MdEmail size={40} className="text-black dark:text-white" />
@@ -40,16 +33,10 @@ export default function Contact() {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="w-full md:w-1/4"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <Card className="group border border-gray-200 bg-white/40 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] dark:border-gray-800 dark:bg-black/40">
+        <div className="w-full md:w-1/4">
+          <Card className="group border border-gray-200 bg-white/80 transition-colors duration-300 hover:border-green-500 dark:border-gray-800 dark:bg-neutral-900/80">
             <div className="flex flex-col items-center space-y-3 text-center py-4">
               <Card className="mx-auto w-fit border border-gray-200 bg-white/60 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-black/60">
                 <FaWhatsapp size={40} className="text-green-500" />
@@ -69,7 +56,7 @@ export default function Contact() {
               </div>
             </div>
           </Card>
-        </motion.div>
+        </div>
       </Flex>
     </section>
   );

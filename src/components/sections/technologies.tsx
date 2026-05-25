@@ -2,7 +2,6 @@
 
 import { TECH_STACK } from "@/constants";
 import { Card, Flex } from "@radix-ui/themes";
-import { motion } from "framer-motion";
 
 export default function Technologies() {
   return (
@@ -21,13 +20,7 @@ export default function Technologies() {
         {TECH_STACK.map((tech, index) => {
           const Icon = tech.icon;
           return (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
+            <div key={index}>
               <Card className="group w-fit border border-gray-200 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.2)] dark:border-gray-800 dark:bg-black/50 dark:hover:border-green-500">
                 <Flex align="center" gap="3" className="px-2 py-1">
                   <Icon
@@ -39,7 +32,7 @@ export default function Technologies() {
                   </p>
                 </Flex>
               </Card>
-            </motion.div>
+            </div>
           );
         })}
       </Flex>

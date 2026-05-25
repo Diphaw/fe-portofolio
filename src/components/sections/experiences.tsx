@@ -2,7 +2,6 @@
 
 import { EXPERIENCES, TECH_STACK } from "@/constants";
 import { Card, Flex, Box } from "@radix-ui/themes";
-import { motion } from "framer-motion";
 
 export default function Experiences() {
   return (
@@ -19,15 +18,9 @@ export default function Experiences() {
 
       <div className="space-y-5 py-5 px-10 md:px-20">
         {EXPERIENCES.map((exp, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-          >
+          <div key={index}>
             <Flex direction="column">
-              <Card className="group w-full border border-gray-200 bg-white/40 backdrop-blur-md transition-all duration-300 hover:border-green-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] dark:border-gray-800 dark:bg-black/40 md:w-1/2">
+              <Card className="group w-full border border-gray-200 bg-white/80 transition-colors duration-300 hover:border-green-500 dark:border-gray-800 dark:bg-neutral-900/80 md:w-1/2">
                 <Flex className="px-5 py-5">
                   <Box>
                     <h1 className="text-xl font-semibold text-black dark:text-white md:text-2xl">
@@ -49,7 +42,7 @@ export default function Experiences() {
                         return (
                           <Card
                             key={techIndex}
-                            className="w-fit border border-gray-200 bg-white/60 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-black/60"
+                            className="w-fit border border-gray-200 bg-white/80 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-neutral-800/80"
                           >
                             <Flex align="center" gap="2">
                               <Icon size={20} className={tech.color} />
@@ -65,7 +58,7 @@ export default function Experiences() {
                 </Flex>
               </Card>
             </Flex>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
