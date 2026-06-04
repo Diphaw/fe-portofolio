@@ -20,7 +20,7 @@ export default function Experiences() {
         {EXPERIENCES.map(({ title, company, date, description }, index) => (
           <Card
             key={index}
-            className="group w-full border border-gray-200 bg-white/80 transition-colors duration-300 hover:border-green-500 dark:border-gray-800 dark:bg-neutral-900/80 md:w-1/2"
+            className="hover-card-effect w-full border border-gray-200 bg-white/80 transition-colors duration-300 dark:border-gray-800 dark:bg-neutral-900/80 md:w-1/2"
           >
             <Box className="px-5 py-5">
               <h2 className="text-xl font-semibold text-black dark:text-white md:text-2xl">
@@ -36,18 +36,14 @@ export default function Experiences() {
                 {description}
               </p>
 
-              <Flex gap="4" wrap="wrap" className="w-full pt-4">
+              <Flex gap="3" wrap="wrap" className="w-full pt-4">
                 {TECH_STACK.map(({ name }, techIndex) => (
-                  <Card
+                  <span
                     key={techIndex}
-                    className="w-fit border border-gray-200 bg-white/80 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-neutral-800/80"
+                    className="tech-tag rounded-md border border-gray-200 bg-white px-2.5 py-1 text-xs font-medium text-gray-700 dark:border-gray-700 dark:bg-neutral-800 dark:text-gray-300 transition-colors duration-200 md:text-sm"
                   >
-                    <Flex align="center" gap="2">
-                      <p className="text-sm text-black dark:text-white md:text-base">
-                        {name}
-                      </p>
-                    </Flex>
-                  </Card>
+                    {name}
+                  </span>
                 ))}
               </Flex>
             </Box>
