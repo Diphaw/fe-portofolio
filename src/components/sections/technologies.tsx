@@ -20,11 +20,16 @@ export default function Technologies() {
         {TECH_STACK.map(({ name, icon: Icon, color }, index) => (
           <Card
             key={index}
-            className="group w-fit border border-gray-200 bg-white/50 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-green-500 hover:shadow-[0_0_20px_rgba(34,197,94,0.2)] dark:border-gray-800 dark:bg-black/50 dark:hover:border-green-500"
+            className="hover-tech-effect w-fit border border-gray-200 bg-white/50 backdrop-blur-sm dark:border-gray-800 dark:bg-black/50 transform-gpu"
           >
             <Flex align="center" gap="3" className="px-2 py-1">
-              <Icon size={40} className={`${color} transition-transform duration-300 group-hover:scale-110`} />
-              <p className="text-sm text-black dark:text-white md:text-lg">{name}</p>
+              <Icon
+                size={40}
+                className={`${color} tech-icon-transition`}
+              />
+              <p className="text-sm text-black dark:text-white md:text-lg">
+                {name}
+              </p>
             </Flex>
           </Card>
         ))}
