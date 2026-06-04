@@ -37,14 +37,15 @@ export default function Experiences() {
               </p>
 
               <Flex gap="4" wrap="wrap" className="w-full pt-4">
-                {TECH_STACK.map(({ name, icon: Icon, color }, techIndex) => (
+                {TECH_STACK.map(({ name }, techIndex) => (
                   <Card
                     key={techIndex}
                     className="w-fit border border-gray-200 bg-white/80 transition-colors duration-300 group-hover:border-green-500/30 dark:border-gray-700 dark:bg-neutral-800/80"
                   >
                     <Flex align="center" gap="2">
-                      <Icon size={20} className={color} />
-                      <p className="text-sm text-black dark:text-white md:text-base">{name}</p>
+                      <p className="text-sm text-black dark:text-white md:text-base">
+                        {name}
+                      </p>
                     </Flex>
                   </Card>
                 ))}
